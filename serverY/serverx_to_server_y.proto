@@ -1,0 +1,18 @@
+// serverx_to_server_y.proto
+
+syntax = "proto3";
+
+package serverx;
+
+// Service to interact with serverY
+service ServerYService {
+  rpc ProcessPing(PingABRequest) returns (PingABResponse) {}
+}
+
+message PingABRequest {
+  string message = 1;
+}
+
+message PingABResponse {
+  string message = 1;
+}
